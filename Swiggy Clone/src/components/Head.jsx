@@ -30,12 +30,12 @@ function Head() {
 
   return (
     <div className='w-full shadow-md h-20 flex  justify-center items-center'>
-        <div className='  w-[70%] flex justify-between'>
-            <div className='flex items-center gap-3'>
-            <img className='w-14' src="src/assets/1369418.webp" alt="" />
+        <div className='  w-[80%] flex justify-between  mr-4'>
+            <div className='flex items-center gap-6'>
+            <img className='w-16' src="src/assets/1369418.webp" alt="" />
             <div className='flex items-center gap-2 mt-1'>
-            <p className='font-bold border-b-2 border-black'>Other</p>
-            <img className='w-6' src="src/assets/down.png" alt="" />
+            <p className='font-bold border-b-2 text-sm ml-4 border-black'>Other</p>
+            <img className='w-5' src="src/assets/down.png" alt="" />
             </div>
             </div>
 
@@ -45,9 +45,9 @@ function Head() {
                 {
                     navItem.map((data ,i)=>(
                         
-                    <div key={i} className='flex gap-3'>
-                        <i className={"fi  text-gray-700 "+(data.image)}></i>
-                        <p className='text-sm font-medium text-gray-700 '>{data.name}</p>
+                    <div key={i} className='flex gap-3 mt-1 text-xl '>
+                        <i className={"fi  text-gray-700 text-lg "+(data.image)}></i>
+                        <p className='font-ProximaNova text-base font-medium mt-[0.5px] text-gray-700 '>{data.name}</p>
                     </div>  
                     ))
                 }
