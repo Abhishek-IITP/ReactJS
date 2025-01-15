@@ -46,15 +46,16 @@ function TopRestaurant({ data }) {
           </div>
         </div>
       </div>
-      <div className={`flex mt-4 gap-10 w-full `}>
-        {data.map(({info}) => (
+      <div className={`flex mt-4 gap-10 w-full `} style={{ translate: `-${value}%` }}>
+        {data.map(({info , cta : {link}}) => (
           <div
             className=" hover:scale-95 duration-300"
-            style={{ translate: `-${value}%` }}
+            
           >
-            <RestaurantCards {...info}/>
+            <RestaurantCards {...info} link ={link}/>
           </div>
         ))}
+        
       </div>
       {/* <hr className="border" /> */}
     </div>
