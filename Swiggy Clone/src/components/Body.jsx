@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Cusine from './Cusine'
 import TopRestaurant from './TopRestaurant'
 import Head from './Head'
+import OnlineFoodDelivery from './OnlineFoodDelivery'
 
 function Body() {
   const [topRestaurantData,setTopRestaurantData] = useState([])
@@ -20,10 +21,10 @@ function Body() {
 
   return (
     <div className='w-full '>
-        <div className='w-[73.5%] mx-auto  overflow-hidden '>
-
+        <div className='w-[74%] mx-auto  overflow-hidden '>
             <Cusine data ={cusine}/>
             <TopRestaurant data={topRestaurantData}/>
+            <OnlineFoodDelivery data={topRestaurantData}/>
         </div>
     </div>
   )
