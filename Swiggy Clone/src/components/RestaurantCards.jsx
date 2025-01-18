@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function RestaurantCards(info) {
+  // console.log(info.link.split("/"))
+  // console.log(info.link)
   return (
-    <>
+    <Link to={`/RestaurantMenu/${info.link.split("/").at(-1)}`}>
       <div className="min-w-[295px] h-[175px] relative ">
         <img
           className="duration-1000  w-full h-full  object-cover rounded-2xl"
@@ -13,7 +16,10 @@ function RestaurantCards(info) {
         />
         <div className="absolute w-full h-full rounded-2xl top-0 bg-gradient-to-t from-black from-0%  to-transparent to-40% text-white font-extrabold text-xl"></div>
         <p className="absolute tracking-tighter bottom-0 ml-4 mb-2 text-white font-extrabold text-[1.3rem] z-20">
-          {`${info?.aggregatedDiscountInfoV3?.header}  ${info?.aggregatedDiscountInfoV3?.subHeader}`}
+          {
+            info?.aggregatedDiscountInfoV3?.header  ? info?.aggregatedDiscountInfoV3?.header + " "+info?.aggregatedDiscountInfoV3?.subHeader : " "
+          }
+          
         </p>
       </div>
       <div className="p-3">
@@ -27,7 +33,7 @@ function RestaurantCards(info) {
         </p>
         <p className=" text-black/60 font-semibold">{info?.locality}</p>
       </div>
-    </>
+    </Link>
   );
 }
 
