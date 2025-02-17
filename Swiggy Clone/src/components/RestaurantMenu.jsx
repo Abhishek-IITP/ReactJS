@@ -32,7 +32,7 @@ function RestaurantMenu() {
   return (
     <div className="w-full">
       <div className="w-[800px] mx-auto pt-7">
-        <p className="text-[10gipx] text-slate-400">
+        <p className="text-[10px] text-slate-400">
          <Link to={"/"}><span className="hover:text-slate-600 cursor-pointer">Home</span> </Link> / 
          <Link to={"/"}> <span className="hover:text-slate-600 cursor-pointer">
             {resInfo.city}
