@@ -6,7 +6,7 @@ function App() {
   function handleTodo() {
     setAllTodos([...alltodos, singleTodo])
     saveTodoLocalStorage([...alltodos, singleTodo]);
-    // setAllTodos(upperwalaValue => [...upperwalaValue, singleTodo]);
+    // setAllTodos(upperwalaValue => [...upperwalaValue, singleTodo]);00
   }
   function deleteTodo(i){
     alltodos.splice(i,1)
